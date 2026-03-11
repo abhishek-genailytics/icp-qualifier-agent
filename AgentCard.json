@@ -1,0 +1,33 @@
+{
+  "name": "ICP Qualifier Agent",
+  "description": "Helps B2B sales reps find Ideal Customer Profile (ICP) companies and surface recent trigger events for timely outreach. Searches companies by industry, location, employee size, funding stage, and tech stack — then fetches the latest news to identify hooks like funding rounds, product launches, or leadership changes.",
+  "url": "http://icp-qualifier-agent:5000/",
+  "provider": {
+    "organization": "GenAIlytics"
+  },
+  "version": "1.0.0",
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text"],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "skills": [
+    {
+      "id": "search_companies",
+      "name": "ICP Company Search",
+      "description": "Search for companies matching ICP criteria: industry, location, headcount range, funding stage, and tech stack. Returns a curated list of target accounts."
+    },
+    {
+      "id": "get_company_news",
+      "name": "Company News & Trigger Events",
+      "description": "Fetch recent news about a specific company to identify trigger events such as funding rounds, product launches, hiring surges, or expansions that signal buying intent."
+    },
+    {
+      "id": "qualify_and_summarize",
+      "name": "ICP Qualification Brief",
+      "description": "Generate a structured ICP qualification summary and a suggested outreach angle based on company profile and recent news — ready for a sales rep to act on immediately."
+    }
+  ]
+}

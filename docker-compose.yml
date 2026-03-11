@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  icp-qualifier-agent:
+    build: .
+    container_name: icp-qualifier-agent
+    expose:
+      - "5000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - AI_ARK_API_KEY=${AI_ARK_API_KEY}
+      - NEWS_API_KEY=${NEWS_API_KEY}
+    networks:
+      - agents-net
+    restart: unless-stopped
+
+networks:
+  agents-net:
+    external: true
