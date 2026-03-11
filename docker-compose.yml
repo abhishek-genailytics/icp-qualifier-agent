@@ -7,9 +7,9 @@ services:
     expose:
       - "5000"
     environment:
-      - OPENAI_API_KEY=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
-      - AI_ARK_API_KEY=1d442ba80dc44856a3d91b8d62d638b4
-      - NEWS_API_KEY=3fee65049cc64c73b4564b19de04ee33
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - AI_ARK_API_KEY=${AI_ARK_API_KEY}
+      - NEWS_API_KEY=${NEWS_API_KEY}
     networks:
       - agents-net
     restart: unless-stopped
